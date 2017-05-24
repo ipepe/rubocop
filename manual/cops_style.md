@@ -1138,7 +1138,7 @@ SupportedStyles | for, each
 
 Enabled by default | Supports autocorrection
 --- | ---
-Enabled | No
+Enabled | Yes
 
 This cop enforces the use of a single string formatting utility.
 Valid options include Kernel#format, Kernel#sprintf and String#%.
@@ -1642,6 +1642,7 @@ foo.blank?
 foo.any? { |f| f.even? }
 foo != bar
 foo == bar
+!!('foo' =~ /^\w+$/)
 ```
 
 ### Important attributes
@@ -2212,6 +2213,27 @@ This cop checks for multi-line ternary op expressions.
 ### References
 
 * [https://github.com/bbatsov/ruby-style-guide#no-multiline-ternary](https://github.com/bbatsov/ruby-style-guide#no-multiline-ternary)
+
+## Style/MultipleComparison
+
+Enabled by default | Supports autocorrection
+--- | ---
+Enabled | No
+
+This cop checks against comparing a variable with multiple items, where
+`Array#include?` could be used instead to avoid code repetition.
+
+### Example
+
+```ruby
+# bad
+a = 'a'
+foo if a == 'a' || a == 'b' || a == 'c'
+
+# good
+a = 'a'
+foo if ['a', 'b', 'c'].include?(a)
+```
 
 ## Style/MutableConstant
 
@@ -2785,8 +2807,8 @@ default.
 ```ruby
 # Style/PercentLiteralDelimiters:
 #   PreferredDelimiters:
-#     default: []
-#     %i:      ()
+#     default: '[]'
+#     '%i':    '()'
 
 # good
 %w[alpha beta] + %i(gamma delta)
@@ -4056,6 +4078,35 @@ WordRegex | (?-mix:\A[\p{Word}\n\t]+\z)
 ### References
 
 * [https://github.com/bbatsov/ruby-style-guide#percent-w](https://github.com/bbatsov/ruby-style-guide#percent-w)
+
+## Style/YodaCondition
+
+Enabled by default | Supports autocorrection
+--- | ---
+Enabled | Yes
+
+This cop checks for Yoda conditions, i.e. comparison operations where
+readability is reduced because the operands are not ordered the same
+way as they would be ordered in spoken English.
+
+### Example
+
+```ruby
+# bad
+99 == foo
+"bar" == foo
+42 >= foo
+```
+```ruby
+# good
+foo == 99
+foo == "bar"
+for <= 42
+```
+
+### References
+
+* [https://en.wikipedia.org/wiki/Yoda_conditions](https://en.wikipedia.org/wiki/Yoda_conditions)
 
 ## Style/ZeroLengthPredicate
 

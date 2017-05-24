@@ -1,6 +1,7 @@
 [![Gem Version](https://badge.fury.io/rb/rubocop.svg)](http://badge.fury.io/rb/rubocop)
 [![Dependency Status](https://gemnasium.com/bbatsov/rubocop.svg)](https://gemnasium.com/bbatsov/rubocop)
-[![Build Status](https://travis-ci.org/bbatsov/rubocop.svg?branch=master)](https://travis-ci.org/bbatsov/rubocop)
+[![Travis Status](https://travis-ci.org/bbatsov/rubocop.svg?branch=master)](https://travis-ci.org/bbatsov/rubocop)
+[![Appveyor Status](https://ci.appveyor.com/api/projects/status/github/bbatsov/rubocop?svg=true)](https://ci.appveyor.com/project/bbatsov/rubocop)
 [![Coverage Status](https://img.shields.io/codeclimate/coverage/github/bbatsov/rubocop.svg)](https://codeclimate.com/github/bbatsov/rubocop)
 [![Code Climate](https://codeclimate.com/github/bbatsov/rubocop/badges/gpa.svg)](https://codeclimate.com/github/bbatsov/rubocop)
 [![Inline docs](http://inch-ci.org/github/bbatsov/rubocop.svg)](http://inch-ci.org/github/bbatsov/rubocop)
@@ -50,7 +51,7 @@ haven't reached version 1.0 yet). To prevent an unwanted RuboCop update you
 might want to use a conservative version locking in your `Gemfile`:
 
 ```rb
-gem 'rubocop', '~> 0.48.1', require: false
+gem 'rubocop', '~> 0.49.0', require: false
 ```
 
 ## Quickstart
