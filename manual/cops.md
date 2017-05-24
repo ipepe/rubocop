@@ -59,7 +59,7 @@ associated with potential security issues.
 ### Rails
 
 Rails cops are specific to the Ruby on Rails framework. Unlike all other cop
-types they are not used by default, and you have to request them explicity:
+types they are not used by default, and you have to request them explicitly:
 
 ```sh
 $ rubocop -R
@@ -203,6 +203,7 @@ In the following section you find all available cops:
 * [Lint/RandOne](cops_lint.md#lintrandone)
 * [Lint/RequireParentheses](cops_lint.md#lintrequireparentheses)
 * [Lint/RescueException](cops_lint.md#lintrescueexception)
+* [Lint/RescueType](cops_lint.md#lintrescuetype)
 * [Lint/SafeNavigationChain](cops_lint.md#lintsafenavigationchain)
 * [Lint/ScriptPermission](cops_lint.md#lintscriptpermission)
 * [Lint/ShadowedException](cops_lint.md#lintshadowedexception)
@@ -381,6 +382,7 @@ In the following section you find all available cops:
 * [Style/MultilineIfThen](cops_style.md#stylemultilineifthen)
 * [Style/MultilineMemoization](cops_style.md#stylemultilinememoization)
 * [Style/MultilineTernaryOperator](cops_style.md#stylemultilineternaryoperator)
+* [Style/MultipleComparison](cops_style.md#stylemultiplecomparison)
 * [Style/MutableConstant](cops_style.md#stylemutableconstant)
 * [Style/NegatedIf](cops_style.md#stylenegatedif)
 * [Style/NegatedWhile](cops_style.md#stylenegatedwhile)
@@ -447,6 +449,7 @@ In the following section you find all available cops:
 * [Style/WhileUntilDo](cops_style.md#stylewhileuntildo)
 * [Style/WhileUntilModifier](cops_style.md#stylewhileuntilmodifier)
 * [Style/WordArray](cops_style.md#stylewordarray)
+* [Style/YodaCondition](cops_style.md#styleyodacondition)
 * [Style/ZeroLengthPredicate](cops_style.md#stylezerolengthpredicate)
 
 <!-- END_COP_LIST -->

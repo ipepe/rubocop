@@ -680,6 +680,12 @@ Style/MultilineTernaryOperator:
   StyleGuide: '#no-multiline-ternary'
   Enabled: true
 
+Style/MultipleComparison:
+  Description: >-
+                 Avoid comparing a variable with multiple items in a conditional,
+                 use Array#include? instead.
+  Enabled: true
+
 Style/MutableConstant:
   Description: 'Do not assign mutable objects to constants.'
   Enabled: true
@@ -1013,6 +1019,11 @@ Style/WordArray:
   StyleGuide: '#percent-w'
   Enabled: true
 
+Style/YodaCondition:
+  Description: 'Do not use literals as the first operand of a comparison.'
+  Reference: 'https://en.wikipedia.org/wiki/Yoda_conditions'
+  Enabled: true
+
 Style/ZeroLengthPredicate:
   Description: 'Use #empty? when testing for objects of length 0.'
   Enabled: true
@@ -1278,6 +1289,10 @@ Lint/RequireParentheses:
 Lint/RescueException:
   Description: 'Avoid rescuing the Exception class.'
   StyleGuide: '#no-blind-rescues'
+  Enabled: true
+
+Lint/RescueType:
+  Description: 'Avoid rescuing from non constants that could result in a `TypeError`.'
   Enabled: true
 
 Lint/SafeNavigationChain:
